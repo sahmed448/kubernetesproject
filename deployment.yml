@@ -5,4 +5,4 @@ metadata:
 spec:
   containers:
   - name: pythonapp-server
-    image: nginx
+    image: python:latest
