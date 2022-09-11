@@ -1,7 +1,7 @@
 pipeline {
 
   environment {
-    dockerimagename = "sahmed448/python"
+    dockerimagename = "sahmed448/python:3.7"
     dockerImage = ""
   }
 
