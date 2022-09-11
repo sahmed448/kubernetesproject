@@ -1,7 +1,7 @@
 pipeline {
 
   environment {
-    dockerimagename = "sahmed448/python:3.7"
+    dockerimagename = "sahmed448/nodeapp"
     dockerImage = ""
   }
 
@@ -11,7 +11,7 @@ pipeline {
 
     stage('Checkout Source') {
       steps {
-        git 'https://github.com/sahmed448/kubernetesproject.git'
+        git 'https://github.com/sahmed448/nodeapp_test.git'
       }
     }
 
@@ -39,7 +39,7 @@ pipeline {
     stage('Deploying App to Kubernetes') {
       steps {
         script {
-          kubernetesDeploy(configs: "deployment.yml", kubeconfigId: "kubernetes")
+          kubernetesDeploy(configs: "deploymentservice.yml", kubeconfigId: "kubernetes")
         }
       }
     }
