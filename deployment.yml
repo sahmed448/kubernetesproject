@@ -1,0 +1,8 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pythonapp-deployment
+spec:
+  containers:
+  - name: pythonapp-server
+    image: nginx
